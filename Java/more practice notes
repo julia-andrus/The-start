@@ -1,0 +1,266 @@
+more practice notes
+
+Html
+    -For short cuts on div ===> .navbar-container/ cause .==> class
+    -For shorcut on anything in the <> ==> nav.navbar and press tab ==> <nav class="navbar"></nav>
+    -for shorcut on creating id/<a> ==> a#navbar-log and then press tab ==>  <a href="" id="navbar-logo"></a> ///# ==> id
+    -for id and class in <div> ==>.navbar-toggle#navbar-menue and press tab ===> <div class="navbar-toggle" id="mobile-menue"></div>
+    -for shortcut on copying and pastin===> Shift + Alt+ down arrow
+
+
+CSS
+
+    -display: flex
+    justify-content ==> place thing horizontall
+    align-items==> centers things vertically
+    -index ==> stacking, making the object above all other stuff in page
+    -background-image ==> allows you to creat a color sheme
+    - -webkit-background-clip ==>
+    transition: all 0.3s ease ==> delayed light when mouse over button
+    -@media query ===> doing some kind of response
+    -.navbar-menue.active ===> will be active using js
+
+
+
+
+JS
+    -document.querySelector("body") ==> slecting the button from the html
+    
+    -Math.floor ==> rounds down to the nearest whole number
+
+    -Math.random ==>Math.random generates a irrational (decimal) number between 0 and 1, 
+    that isn’t a whole number, and also isn’t 1. 
+    To get a number, for example between 0 and 10, multiply your answer by 10: Math.random() * 10 
+
+    -Math.floor(Math.Random()) Math.floor(Math.random() * 10) To get a whole number between 1 and 10, 
+    add 1 to the answer: Math.floor(Math.random() * 10 + 1)
+
+
+    /////////////////////////////////////////////////////////////////////////////////////////////
+
+
+    Project 2
+
+    js
+   
+        let btn = document.querySelector(".colorbtn");
+
+        let body = document.querySelector("body");
+
+        let span= document.querySelector(".colorname");
+
+        let theNames =[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "A", "B", "C", "D", "E", "F"]
+
+        let random = Math.floor(Math.random()*colors.length); ===> it's multplied by colors.length is becuase if we multiplied 
+        with math.floor.(math.random) then we will get a number between 0 and 0.999.
+
+
+        -for(let i = 0; i < 6; i++) //for loop//
+            -i =0,starting from 0 on the array
+            -then it's going to do 6 times, for to get it to 6 time we need (i<6)
+            -then we need to let i to increase by 1, so i++
+
+        -let random =Math.floor(Math.random()*theNames.length) ==> .length is the length of the array
+        -let color = "#" ==> creating a variable that's going to be our color
+        -color +=theNames[random]; ====> we are going to add the variable color + theNames[random] (random thing in the array(theNames))
+            
+        -body.style.backgroundColor=color; ==> putting it out of the for(loop) because we just want to creating the colors in the body out of the color
+        -span.innerHTML = color; ====>this adds text of the of span. once clicked, we get the text of the random numbers and letter that connect with the colors
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+
+Project 3
+
+
+    JS notes
+
+
+        const quotes =[
+
+            {name: "po", 
+            say: "Meow"},
+
+            {name: "scout",
+            say: "you looking dirty po"},
+
+            {name: "darth",
+            say: "I hate you kittens"},
+
+            {name: "Juju",
+            say: "I love cats"}
+                        
+        ]
+
+
+        const btn = document.querySelector("button");
+
+        const quote=document.querySelector(".quote");
+
+        const quoteAuthor =document.querySelector(".match");
+
+        btn.addEventListener("click", showQuote);
+
+        function showQuote()
+        {
+
+            const number = Math.floor(Math.random()*quotes.length);// never going 
+            to exceed out mber of array and never under the number of our array
+            // console.log(number);
+
+            quoteAuthor.innerHTML = quotes[number].name; ==> we want the name show up in the quotAuthor section
+            ,so with innerHTML and quotes[number].say ===> we want the quote show up in the quote section.
+
+            quote.innerHTML = quotes[number].say;
+
+
+        }
+
+
+
+
+
+    
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+
+Project 4
+
+HTML
+{
+    <body>
+    <div class="container">
+        <h2>Write a message to send</h2>
+
+        <input type="text" name="messageIn" id="typed"></input>
+        
+        <button type="button" id="btn">Press to send</button>
+       
+        <h1>Last message delivered</h1>
+        <h2 id="message-shown"><!--Message Here--></h2>
+    
+    </div>
+
+    <script src= "project4.js"></script>
+    
+    </body>
+}
+
+CSS
+
+    input[type=text]:focus{ /* focus on the text box*/
+    box-shadow: 0 0 10px #c94b4b; 
+    
+        }
+
+    #message-shown{
+    margin: .5rem;
+    color: #c94b4b;
+}
+
+
+JS
+    let send =document.querySelector("#btn");
+
+    let messagedTyped = document.querySelector("#typed");
+
+
+    let messageShown = document.querySelector("#message-shown");
+
+    send.addEventListener("click", sendMessage);
+
+    function sendMessage (){
+        let typed = messagedTyped.value; ==>.value is collected (collecting what ever is in the box) 
+        //console.log(value);
+        
+        if(typed===""){     ===> if there is nothing typed in the box, then alert
+            alert("please enter valid value") 
+        }
+        else{ ===> if something is typed then...
+
+        messageShown.innerHTML=value; ==>message will show what is typed 
+        messagedTyped.value= ""; after pressing send, the text bos will be emptied for a new message
+        }
+        
+    }
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+
+Project 5
+
+CSS
+
+    box-shadow: 1px 1px 10px 10px black; 
+
+
+JS
+
+        let numHere = document.querySelector("#numHere");
+
+        let btn2 = document.querySelector("#btn1");
+
+        let btn1 = document.querySelector("#btn2");
+
+        let count = 0;
+
+
+
+        btn1.addEventListener("click",p);
+        btn2.addEventListener("click", minus);
+
+        function p () {
+            count++;
+            numHere.innerHTML = count;
+            if(numHere.innerHTML > "0"){
+                numHere.style.color = "green"
+            }
+            else if(numHere.innerHTML=== "0"){
+                numHere.style.color="white"
+            }
+            numHere.animate([{opacity: "0.2"}, {opacity: "1.0"}], 
+            {duration:500, fill:"forwards"})
+            }
+
+
+            function minus(){
+            count--
+            numHere.innerHTML =count;
+            if(numHere.innerHTML < "0"){
+                numHere.style.color = "red"
+            }
+            else if(numHere.innerHTML=== "0"){
+                numHere.style.color="white"
+            }
+            numHere.animate([{opacity: "0.2"}, {opacity: "1.0"}], 
+            {duration:500, fill:"forwards"})
+            }
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+
+Project 6
+
+
+
+
+
+
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+
+Project 7
+
+
+

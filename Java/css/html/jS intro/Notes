@@ -1,0 +1,59 @@
+html Notess
+Html-Structure
+
+    <p> makes a new line for paragraphs
+    command+/ == comment : <!----> 
+
+
+
+
+
+
+
+
+CSS Notes
+-CSS for style
+
+    -if I want cooler fonts I have to: @import url(copy and paste link of fonts)
+
+    -body{} edits the whole page
+    -text-transform === all words uppercase
+
+        display: flex; ==> how much space to consider the plane field; 100% of height and center within that 100%
+        flex-direction: column; ==> 
+        align-items: center; ==> center the content vertically and horizontically
+        justify-content; ==> center the content vertically and horizontically
+        height: 100vh; ==> how much space to consider the plane field; 100% of height and center within that 100%
+
+    can just use button in html <button>, so button{} in css; dont have to create an attribute (id, class) for button
+
+    -margin==> between other elements
+    -padding ==> space inside
+
+    -transition ==> the speed (in seconds) of transition when mouse is on that object
+
+    -letter-spacing ==> spacing between letters
+
+
+
+JS Notes
+-JavaScript-programming language---make the page alive
+
+    -work with html elements, just like CSS
+    -document.queySelector ==> search document in html and select("") the element you are looking for
+    -document.queySelectorAll ==> search document in html and select("") the all elements with in the parathesis you are looking for
+    -addEventListner ==> listen for some kind of event with using function
+
+     if( picsarray ===4){  ==> if the picsarray goes to 4, then let pics array go back to 0.
+        picsarray = 0;
+    };
+
+
+
+
+
+
+
+
+
+

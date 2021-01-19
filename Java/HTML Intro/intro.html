@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A little introto HTML</title>
+</head>
+<body>
+<!--comment-->
+
+<a href="blog.html">Going into blog intro</a> <!-- navigation works: going in to another html folder/web-->
+
+
+<!--Block elements : start on anew line; take full width =====> <div>, <h1>-<h6>, <p>, <form>-->
+
+<!--Headings-->
+    <h1>Po</h1>
+    <h2>Po</h2>
+    <h3>Po</h3>
+    <h4>Po</h4>
+    <h4>Po</h4>
+    <h5>Po</h5>
+    <h6>Po</h6>
+
+   
+
+
+
+<!--Paragraphs-->
+    <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+         Minima, nam accusantium. A tempore id dolores repudiandae, 
+         quam similique quisquam consectetur maiores, velit delectus at sed dignissimos, 
+         dolor animi in obcaecati. Tis is some crazy as paragraph.
+    </p>
+
+
+
+<!--Inline elements : do not start on a new line ======> <span>,  <image>, <a> -->
+
+        <!-- <a href='' target='_blank'> allows us to create an location link (about.hml) or external link (google.com) =====> 
+    target allows us to open on a new tab -->
+<p>
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+    Inventore debitis <strong> veniam, recusandae modi
+    placeat dolor deleniti excepturi</strong>, expedita eaque non dolorem 
+    voluptates <em> quos nemo minima necessitatibus odio harum</em>. <a href= "http://google.com" target='_blank'>
+    Another crazy as paragraph</a>.
+
+</p>
+
+<!--Lists ===> unordered lists-->
+
+    <ul>
+        <li> List Item 1</li>
+        <li> List Item 2</li>
+        <li> List Item 3</li>
+        <li> List Item 4</li>
+    </ul>
+
+    <!--Ordered lists-->
+    <ol>
+        <li> List Item 1</li>
+        <li> List Item 2</li>
+        <li> List Item 3</li>
+        <li> List Item 4</li>
+
+    </ol>
+
+<!-- Table -->
+    <table> <!-- table tag -->
+        <thead>
+            <tr> <!-- <tr(tablerow)> means heading of each column-->
+                <th> Name</th>
+                <th>Email</th> <!-- thead==is the heading with <th>-->
+                <th>Phone Number</th>
+            </tr>
+            <tbody>
+                <tr>
+                    <td>Julia</td>
+                    <td>Juju@gmail.com</td> <!--tbody is the boding in the heading.  <td> is th data of the body-->
+                    <td>985566346</td>
+                </tr>
+                <tr>
+                    <td>Julia</td>
+                    <td>Juju@gmail.com</td>
+                    <td>986547675</td>
+                </tr>
+
+                <tr>
+                    <td>Julia</td>
+                    <td>Juju@gmail.com</td>
+                    <td>984645654</td>
+                </tr>
+            </tbody>  
+        </thead>   
+    </table>
+
+  <br> <!-- separates line==line break-->
+  <hr> <!-- creates a horizontal line-->
+
+<!-- Form -->
+
+    <form action="process.php" method= "POST"> <!-- action =>attribute of action, submitting form to a "pag"
+    --method = "post" means making apost request to server...adding data to a databas.  method ="GET" means you will see the data in the Url -->
+    <div>
+        <label>First Name</label>
+        <input type="text" name="first-name"
+       placeholder="Enter First Name"> <!-- value=' Enter Name' was annoying so they
+        did placeholder="enteer First name"-->
+    </div>
+    <br>
+    <div>
+        <label>Last Name</label>
+        <input type="text" name="last-name">
+    </div>
+    <br>
+    <di>
+        <label>Email</label>
+        <input type="email" name="email"> <!-- type = "email" allows us to add validation; if it's not a valid email address, then it will pop us an error -->
+    </di>
+    <br>
+    <br>
+    <di>
+        <label>Message</label>
+        <textarea name="message"></textarea> <!-- Textare allows use to create a box where people can type message-->
+    </di>
+    <br>
+    <br>
+    <di>
+        <label>Gender</label>
+        <select name="Gender"> <!-- select is where user will have options to click on their gender-->
+            <option value="male"> Male</option> <!-- option is creating what choices the user has-->
+            <option value="other"> Other</option>
+            <option value="female"> Female</option>
+            <option value="Do not wish to tell">Don't wish to tell</option>
+        </select>
+    </di>
+    <br>
+    <div>
+        <label>Age :</label> <!-- Number type-->
+        <input type="number" name="age" value="60"> <!-- value is added for  predefined; don't really need -->
+    </div>
+    <br>
+    <br>
+    <div>
+        <label>Birthday :</label>
+        <input type="date" name="Birthday"> <!-- type of date == date selector-->
+    </div>
+    <br>
+    <input type="Submit" name="Submit" 
+    value="Submit">
+
+    </form>
+
+    <br>
+    <br>
+    <!-- Button -->
+    <button>Click me</button>
+
+    <br>
+    <br>
+
+    <!-- images -->
+    <a href= "Brain image.gif"> <!-- wrapping a link around the image-->
+        <img src = "Brain image.gif" width="200" height="250"> <!-- finding image and putting it into HTML folder-->
+    </a>
+
+    <br>
+    <br>
+
+    <!-- Quotations -->
+
+        <!-- Block quotes -->
+            <blockquote cite= "http://hi.com"> <!-- cite in source console-->
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum commodi consectetur,
+                 incidunt minima eum et labore. Rem quis sint adipisci v
+                oluptatum debitis iure officia voluptate assumenda doloremque. Illo, cupiditate esse?
+            </blockquote> 
+
+        
+        <!-- abbr is the abbreviation tag-->
+
+        <p>The <abbr title = "World Wide Web">WWW</abbr>
+        is awesome</p> 
+
+        <!-- Cite tag = lets browser know something is being cited-->
+            <p><cite>intro to html notes </cite>By Po</p>
+
+
+
+
+
+
+    <!-- Semantic tags ===> describes its meaning to both browser an developer :
+
+        <header></header == local, socail media links>
+
+        <nav></nav== nav bar>
+
+    <section></section = describtion of homepage>     <aside></aside == side bar content>
+    
+    <article></article>
+    
+        <footer></footer = private policy >
+    -->
+
+
+
+
+    <div style= "margin-top: 10000px"></div>
+
+</body>
+</html>
